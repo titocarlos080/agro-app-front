@@ -1,11 +1,25 @@
-<ul>
-    <li>
-        <a routerLink="/products">Productos</a>   
-    </li>
-    <li>
-        <a routerLink="/home">Home</a>
+<div class="landing-container">
+  <app-header></app-header>
 
-    </li>
-</ul>
-<router-outlet/>
-  
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Revolucionando la Agricultura</h2>
+      <p>Descubre cómo nuestras soluciones innovadoras mejoran la eficiencia y sostenibilidad del agro.</p>
+      <a routerLink="/products" class="cta-button">Ver Productos</a>
+    </div>
+  </section>
+
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    menuToggle.addEventListener('click', function () {
+      nav.classList.toggle('active');
+    });
+  });
+</script>

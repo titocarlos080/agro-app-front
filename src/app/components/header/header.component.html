@@ -1,0 +1,15 @@
+<header class="header">
+    <h1>Agritech</h1>
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle navigation">
+      <span class="menu-icon">&#9776;</span>
+    </button>
+    <nav class="nav" [ngClass]="{'active': isMenuOpen}">
+      <ul>
+        <li><a routerLink="/Investigaciones">Investigación</a></li>
+        <li><a routerLink="/blog">Blog</a></li>
+        <li><a routerLink="/products">Productos</a></li>
+        <li><a routerLink="/home">Inicio</a></li>
+      </ul>
+    </nav>
+  </header>
+  

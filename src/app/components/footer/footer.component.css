@@ -1,7 +1,91 @@
-.footer {
+content-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer {
     background-color: #28a745;
     color: white;
-    text-align: center;
     padding: 1rem;
   }
   
+  .contacto, .referencias, .rrss {
+    margin-bottom: 1rem;
+  }
+  
+  .contacto h3, .referencias h3, .rrss h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contacto p, .referencias p {
+    margin-bottom: 0.5rem;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .map-container {
+    margin-top: 1rem;
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Responsive Styles */
+  @media (min-width: 768px) {
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  
+    .contacto, .referencias, .rrss {
+      flex: 1;
+      margin: 0 1rem;
+    }
+  
+    .contacto, .referencias {
+      max-width: 25%;
+    }
+  
+    .rrss {
+      max-width: 20%;
+    }
+  
+    .map-container {
+      flex: 1;
+      margin: 1rem 0;
+    }
+  
+    .map-container iframe {
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .footer {
+      display: block;
+    }
+  
+    .contacto, .referencias, .rrss {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  
+    .map-container {
+      margin-top: 1rem;
+    }
+  
+    .map-container iframe {
+      height: 250px;
+    }
+  }

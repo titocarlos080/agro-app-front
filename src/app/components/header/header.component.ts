@@ -13,6 +13,8 @@ export class HeaderComponent {
   isMenuOpen = false;
 
   toggleMenu() {
+    console.log("Holas");
+    
     this.isMenuOpen = !this.isMenuOpen;
   }
 }

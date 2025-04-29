@@ -1,33 +1,80 @@
+<div class="landing-container">
+  <app-header></app-header>
 
- 
- <div class="landing-container">
-    <app-header></app-header>
-  
-    <section class="hero">
-
-      <div class="hero-text">
-        <h2>Revolucionando la Agricultura</h2>
-        <p>Descubre cómo nuestras soluciones innovadoras mejoran la eficiencia y sostenibilidad del agro.</p>
-         <a routerLink="/products" class="cta-button">Ver Productos</a> 
-      </div>
-    </section>
-    <section>
-   
-  
-  
-    </section>
-  
-  <app-footer></app-footer>
-  
-  
+  <div class="hero-full">
+    <img src="/assets/images/Group 33.png" alt="Fondo completo" class="hero-bg" />
+    <div class="hero-overlay">
+      <app-typing-animation></app-typing-animation>
+    </div> 
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const nav = document.querySelector('.nav');
+
+  <section class="section-curvas">
+    <div class="curvas">
+      <!-- tu SVG va aquí -->
+      <svg viewBox="0 0 1539 643" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <g filter="url(#filter0_i_26_176)">
+          <path
+            d="M0.182312 448.928C0.126669 287.062 589.649 474.486 665.574 367.836C741.499 261.185 796.306 250.873 826.739 287.327C857.172 323.781 925.995 259.537 964.095 206.149C1002.19 152.76 1538.01 -229.564 1538.16 206.332C1538.31 642.228 1538.31 642.228 1538.31 642.228L0.248593 641.736C0.248593 641.736 0.237955 610.795 0.182312 448.928Z"
+            fill="#2BC9F8" />
+        </g>
+        <defs>
+          <filter id="filter0_i_26_176" x="0.182373" y="0.128723" width="1538.13" height="646.1"
+            filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="..." result="hardAlpha" />
+            <feOffset dy="4" />
+            <feGaussianBlur stdDeviation="2" />
+            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_26_176" />
+          </filter>
+        </defs>
+      </svg>
+    </div>
+        
+  </section>
+  <section class="section-historias">
+    <div class="informacion-empresa">
+      <h1>AGRITECH</h1>
+      <p>Proveemos soluciones agrícolas sostenibles a través de insumos de calidad y asesoramiento técnico para una producción eficiente y responsable.</p>
+      <a href="#contacto" class="btn-contacto">Contáctanos</a>
+    </div>
+    <img class="chat-presentacion" src="/assets/images/cumunicacion-agritech.svg" alt="Presentación Agritech">
+  </section>
   
-      menuToggle.addEventListener('click', function () {
-        nav.classList.toggle('active');
-      });
-    });
-  </script>
+
+  <section class="section-informacion">
+
+    <div class="contacto" id="contacto">
+      <h3>Contacto</h3>
+      <p>+591 63605726 </p>
+    </div>
+    <div class="referencias">
+      <h3>Referencias</h3>
+      <p>Proveedores:  </p>
+      <p>Certificaciones: ISO 9001, ISO 14001</p>
+    </div>
+    <div class="rrss">
+      <h3>Síguenos en</h3>
+      <a href="https://facebook.com" target="_blank">         <img src="/assets/images/facebook.png" width="40px" height="40px" srcset="">
+      </a>
+      
+      <a href="https://instagram.com" target="_blank">        <img src="/assets/images/instagram.png" width="40px" height="40px" srcset="">
+      </a>
+      <a href="https://www.tiktok.com/@agritech.srl" target="_blank">
+        <img src="/assets/images/tik-tok.png" width="40px" height="40px" srcset="">
+      </a>
+    </div>
+    <div class="ubicacion">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.88413373694!2d-65.52159129033217!3d-16.83210318389656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e41547f5188c55%3A0xbb502f6e1deae9cc!2sAgritech%20S.R.L!5e0!3m2!1ses-419!2sbo!4v1717879283995!5m2!1ses-419!2sbo"
+        width="300" height="250" style="border:0;  " allowfullscreen="" loading="lazy"
+        referrerpolicy="referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </section>
+
+
+  <app-footer></app-footer>
+</div>

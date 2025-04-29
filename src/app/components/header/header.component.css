@@ -1,82 +1,109 @@
+/* --- Estilos base para el header --- */
 .header {
-    background-color: #289e44;
-    color: white;
-    padding: 1rem;
-    height: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-  }
-  
-  
-  
-  .header h1 img {
-    margin-top: 20px;
-    width: 128px;
-    height: 128px;
-  }
-   
+  background-color: #178c44;
+  height: 100px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  z-index: 100;
+}
+
+/* Logo */
+.header h1 {
+  margin: 10px;
+}
+.header h1 img {
+  width: 200px;
+  height: auto;
+  z-index: 101;
+ }
+
+/* Botón hamburguesa (oculto por defecto) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 101;
+}
+
+/* Navegación horizontal por defecto (escritorio) */
+.nav {
+  display: flex;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav ul li {
+  margin-left: 1.5rem;
+}
+
+.header nav ul li a {
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.header nav ul li a:hover {
+  background-color: #2BC9F8;
+  color: #289e44; /* Color verde del header */
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --- Estilos responsivos --- */
+@media (max-width: 768px) {
   .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
+    display: block; /* Mostrar botón hamburguesa */
   }
-  
+
+  /* Navegación oculta inicialmente */
   .nav {
-    display: flex;
+    overflow: hidden;
+    max-height: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: #28a745;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
   }
-  
+
+  /* Navegación visible con transición */
+  .nav.active {
+    max-height: 300px; /* valor suficiente para mostrar todos los enlaces */
+  }
+
   .header nav ul {
-    display: flex;
-    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
-  
+
   .header nav ul li {
-    margin-left: 1.5rem;
+    margin: 0.75rem 0;
   }
-  
-  .header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
+
+  .header h1 img {
+    width: 128px;
+    height: auto;
   }
-  
-  .header nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Estilos para el menú desplegable */
-  @media (max-width: 600px) {
-    .menu-toggle {
-      display: block;
-    }
-  
-    .nav {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: #28a745;
-    }
-  
-    .nav.active {
-      display: block;
-    }
-  
-    .header nav ul {
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    .header nav ul li {
-      margin-left: 0;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-  }
-  
+}

@@ -1,0 +1,8 @@
+--2025-04-23 22:34:28--  https://caracol.com.co/resizer/v2/S3RTW3ZPHZG4HU2BMB2XKBMCEI.jpg?auth=d8b54e2f0862f1f43b9af6db4756d118f0d3a503c6260170ecf911e8b11c7b07
+Resolving caracol.com.co (caracol.com.co)... 143.137.113.58, 143.137.113.56, 2803:2880:226::8f89:713a, ...
+Connecting to caracol.com.co (caracol.com.co)|143.137.113.58|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1628458 (1.6M) [image/jpeg]
+caracol.com.co/resizer/v2/S3RTW3ZPHZG4HU2BMB2XKBMCEI.jpg?auth=d8b54e2f0862f1f43b9af6db4756d118f0d3a503c6260170ecf911e8b11c7b07: Invalid argument
+
+Cannot write to ‘caracol.com.co/resizer/v2/S3RTW3ZPHZG4HU2BMB2XKBMCEI.jpg?auth=d8b54e2f0862f1f43b9af6db4756d118f0d3a503c6260170ecf911e8b11c7b07’ (Invalid argument).

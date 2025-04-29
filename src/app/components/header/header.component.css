@@ -1,20 +1,22 @@
 .header {
-    background-color: #28a745;
+    background-color: #289e44;
     color: white;
     padding: 1rem;
-    height: 20px;
+    height: 2rem;
     display: flex;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
     justify-content: space-between;
     align-items: center;
     position: relative;
   }
   
-  .header h1 {
-    font-size: 2rem;
-  }
   
+  
+  .header h1 img {
+    margin-top: 20px;
+    width: 128px;
+    height: 128px;
+  }
+   
   .menu-toggle {
     display: none;
     background: none;

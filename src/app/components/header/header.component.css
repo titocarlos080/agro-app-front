@@ -1,109 +1,108 @@
-/* --- Estilos base para el header --- */
+/* Header general */
 .header {
-  background-color: #178c44;
-  height: 100px;
-  padding: 2px;
+  width: 100%;
+  background-color: rgba(54, 171, 99, 0.4); /* Verde con 40% de opacidad */  
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed  ;
+   z-index: 10;
+}
+
+/* Contenedor logo + botón */
+.nav-container {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  flex-wrap: wrap;
-  z-index: 100;
+  width: 100%;
 }
 
 /* Logo */
-.header h1 {
-  margin: 10px;
-}
-.header h1 img {
-  width: 200px;
+.logo {
+  width: 180px;
   height: auto;
-  z-index: 101;
- }
+  margin-left: 10%;
+}
 
-/* Botón hamburguesa (oculto por defecto) */
+/* Botón hamburguesa */
 .menu-toggle {
   display: none;
   background: none;
   border: none;
-  color: white;
   font-size: 2rem;
+  color: white;
   cursor: pointer;
-  z-index: 101;
 }
 
-/* Navegación horizontal por defecto (escritorio) */
-.nav {
+/* Menú de navegación - escritorio */
+nav.nav {
   display: flex;
+  justify-content: center;
+  width: 100%;
   transition: max-height 0.4s ease-in-out;
 }
 
-.header nav ul {
+nav.nav ul {
   display: flex;
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
-.header nav ul li {
-  margin-left: 1.5rem;
+nav.nav ul li {
+  margin: 0 1rem;
 }
 
-.header nav ul li a {
+nav.nav ul li a {
   color: white;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-decoration: none;
+  font-weight: bold;
   font-size: 1rem;
-  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
 }
 
-.header nav ul li a:hover {
+nav.nav ul li a:hover {
   background-color: #2BC9F8;
-  color: #289e44; /* Color verde del header */
-  border-radius: 12px;
-  padding: 0.5rem 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: all 0.4s ease-in-out;
-  text-decoration: none;
-  font-weight: bold;
+  color: #178c44;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* --- Estilos responsivos --- */
+/* Responsivo */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block; /* Mostrar botón hamburguesa */
+    display: block;
   }
 
-  /* Navegación oculta inicialmente */
-  .nav {
-    overflow: hidden;
-    max-height: 0;
+  nav.nav {
     flex-direction: column;
-    width: 100%;
-    background-color: #28a745;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(54, 171, 99, 0.4); /* Verde con 40% de opacidad */  
+    overflow: hidden;
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    max-height: 0;
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 1000;
   }
 
-  /* Navegación visible con transición */
-  .nav.active {
-    max-height: 300px; /* valor suficiente para mostrar todos los enlaces */
+  nav.nav.active {
+    max-height: 300px;
   }
 
-  .header nav ul {
+  nav.nav ul {
+   
     flex-direction: column;
-    align-items: center;
     width: 100%;
+    padding: 1rem 0;
   }
 
-  .header nav ul li {
-    margin: 0.75rem 0;
-  }
-
-  .header h1 img {
-    width: 128px;
-    height: auto;
+  nav.nav ul li {
+    margin: 0.5rem 0;
   }
 }

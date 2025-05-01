@@ -1,21 +1,21 @@
 <header class="header">
-  <!-- Logo -->
-  <h1>
-    <img src="/assets/images/logo completo.svg" alt="Logo">
-  </h1>
+  <div class="nav-container">
+    <!-- Logo -->
+    <img src="/assets/images/logo completo.svg" alt="Logo" class="logo">
+ <!-- Navegación -->
+ <nav [ngClass]="{ 'nav': true, 'active': isMenuOpen }">
+  <ul>
+    <li><a routerLink="/home">Inicio</a></li>
+    <li><a routerLink="/products">Productos</a></li>
+    <li><a routerLink="/Investigaciones">Investigación</a></li>
+    <li><a routerLink="/blog">Blog</a></li>
+  </ul>
+</nav>
+    <!-- Botón hamburguesa (solo visible en móviles) -->
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle navigation">
+      <span class="menu-icon">&#9776;</span>
+    </button>
+  </div>
 
-  <!-- Botón para dispositivos móviles -->
-  <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle navigation">
-    <span class="menu-icon">&#9776;</span> <!-- Ícono hamburguesa -->
-  </button>
-
-  <!-- Navegación -->
-  <nav class="nav" [ngClass]="{ 'active': isMenuOpen }">
-    <ul>
-      <li><a routerLink="/Investigaciones">Investigación</a></li>
-      <li><a routerLink="/blog">Blog</a></li>
-      <li><a routerLink="/products">Productos</a></li>
-      <li><a routerLink="/home">Inicio</a></li>
-    </ul>
-  </nav>
+ 
 </header>
